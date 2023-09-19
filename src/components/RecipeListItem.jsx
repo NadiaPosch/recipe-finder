@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { Button, Card, Popup } from "semantic-ui-react";
+import { Link } from 'react-router-dom'
+import { Button, Card, Popup } from 'semantic-ui-react'
 
 const RecipeListItem = ({ recipe }) => {
   return (
@@ -11,9 +11,9 @@ const RecipeListItem = ({ recipe }) => {
             <div
               className="recipe-title"
               style={{
-                whiteSpace: "nowrap",
-                overflow: "hidden",
-                textOverflow: "ellipsis",
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
               }}
             >
               {recipe.title}
@@ -44,7 +44,7 @@ const RecipeListItem = ({ recipe }) => {
         />
       </Card.Content>
     </Card>
-  );
-};
+  )
+}
 
-export default RecipeListItem;
+export default RecipeListItem

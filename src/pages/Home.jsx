@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import { Button } from "semantic-ui-react";
-import { Header } from "../components/Header";
+import { Link } from 'react-router-dom'
+import { Button } from 'semantic-ui-react'
+import { Header } from '../components/Header'
 
 const Home = () => {
   return (
@@ -13,7 +13,7 @@ const Home = () => {
         size="big"
       />
     </Header>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

@@ -1,22 +1,22 @@
-import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import { Button, Grid, Header, Image, Segment } from "semantic-ui-react";
-import { getRecipe } from "../services/api";
+import { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
+import { Button, Grid, Header, Image, Segment } from 'semantic-ui-react'
+import { getRecipe } from '../services/api'
 
 const RecipeDetails = () => {
-  const [recipe, setRecipe] = useState({});
+  const [recipe, setRecipe] = useState({})
 
-  const { recipeId } = useParams();
+  const { recipeId } = useParams()
 
   useEffect(() => {
     const getData = async () => {
-      let result = await getRecipe(recipeId);
+      let result = await getRecipe(recipeId)
       if (result?.recipe) {
-        setRecipe(result.recipe);
+        setRecipe(result.recipe)
       }
-    };
-    getData();
-  }, [recipeId]);
+    }
+    getData()
+  }, [recipeId])
 
   return Object.keys(recipe).length > 0 ? (
     <Grid container stackable columns={2} className="detailsPageContent">
@@ -57,7 +57,7 @@ const RecipeDetails = () => {
         </Segment.Group>
       </Grid.Column>
     </Grid>
-  ) : null;
-};
+  ) : null
+}
 
-export default RecipeDetails;
+export default RecipeDetails

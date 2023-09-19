@@ -6,6 +6,5 @@ export const Header = (props) => {
         {props.children}
       </div>
     </div>
-  );
-};
-
+  )
+}
