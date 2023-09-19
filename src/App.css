@@ -1,6 +1,7 @@
 .bg-image {
   position: relative;
-  background: linear-gradient(rgba(8, 8, 8, 0.3), rgba(8, 8, 8, 0.3)), url("./assets/background.jpg");
+  background: linear-gradient(rgba(8, 8, 8, 0.3), rgba(8, 8, 8, 0.3)),
+    url("./assets/background.jpg");
   min-height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -33,7 +34,7 @@
   margin-bottom: 16px;
 }
 
-.detailsPageContent {
+.details-page-content {
   padding-top: 100px !important;
 }
 

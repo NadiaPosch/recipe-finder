@@ -1,42 +1,46 @@
-import { Link } from 'react-router-dom'
-import { Button, Card, Popup } from 'semantic-ui-react'
+import { Link } from "react-router-dom";
+import { Button, Card, Popup } from "semantic-ui-react";
 
-const RecipeListItem = ({ recipe }) => {
+export const RecipeListItem = (props) => {
   return (
     <Card>
-      <img src={recipe.image_url} alt="thumbnail" style={{ height: 180 }} />
+      <img
+        src={props.recipe.image_url}
+        alt="thumbnail"
+        style={{ height: 180 }}
+      />
       <Card.Content>
         <Popup
           trigger={
             <div
               className="recipe-title"
               style={{
-                whiteSpace: 'nowrap',
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
               }}
             >
-              {recipe.title}
+              {props.recipe.title}
             </div>
           }
-          content={recipe.title}
+          content={props.recipe.title}
           position="top center"
           inverted
         />
         <Card.Description>
-          <h4>{recipe.publisher}</h4>
+          <h4>{props.recipe.publisher}</h4>
         </Card.Description>
       </Card.Content>
       <Card.Content>
         <Button
           as={Link}
-          to={`/recipes/${recipe.recipe_id}`}
+          to={`/recipes/${props.recipe.recipe_id}`}
           content="Details"
           color="blue"
           size="tiny"
         />
         <Button
-          href={recipe.source_url}
+          href={props.recipe.source_url}
           target="_blank"
           content="Recipe URL"
           color="green"
@@ -44,7 +48,5 @@ const RecipeListItem = ({ recipe }) => {
         />
       </Card.Content>
     </Card>
-  )
-}
-
-export default RecipeListItem
+  );
+};

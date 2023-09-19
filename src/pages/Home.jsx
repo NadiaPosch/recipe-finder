@@ -1,10 +1,10 @@
-import { Link } from 'react-router-dom'
-import { Button } from 'semantic-ui-react'
-import { Header } from '../components/Header'
+import { Link } from "react-router-dom";
+import { Button } from "semantic-ui-react";
+import { Header } from "../components/Header";
 
 const Home = () => {
   return (
-    <Header title="Find your Recipes" bgClass="bg-image">
+    <Header title="Find your Recipes">
       <Button
         content="SEARCH RECIPES"
         color="primary"
@@ -13,7 +13,7 @@ const Home = () => {
         size="big"
       />
     </Header>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
