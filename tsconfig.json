@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "outDir": "./build",
+    "target": "es6",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "jsx": "react",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext"
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules"]
+}
