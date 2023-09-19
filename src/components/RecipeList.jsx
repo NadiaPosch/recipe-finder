@@ -1,25 +1,23 @@
-import { Container, Header, Grid } from "semantic-ui-react";
+import { Grid, Header } from "semantic-ui-react";
 import RecipeListItem from "./RecipeListItem";
 
 const RecipeList = ({ recipes, searchedQuery }) => {
   return (
-    <Container>
+    <div className="container">
       <Header content={`Recipe Lists for "${searchedQuery}"`} />
-      <Grid columns={4} doubling>
-        {recipes &&
-          recipes.map((recipe) => (
-            <Grid.Column
-              style={{
-                height: "450px",
-                width: "300px",
-              }}
-              key={recipe.id} // Add a unique key when mapping elements
-            >
-              <RecipeListItem style={{ height: "450px" }} recipe={recipe} />
-            </Grid.Column>
-          ))}
-      </Grid>
-    </Container>
+      <div class='grid'>
+        {recipes?.map((recipe) => (
+          <Grid.Column
+            style={{
+              width: "300px",
+            }}
+            key={recipe.id} // Add a unique key when mapping elements
+          >
+            <RecipeListItem style={{ height: "450px" }} recipe={recipe} />
+          </Grid.Column>
+        ))}
+      </div>
+    </div>
   );
 };
 

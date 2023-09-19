@@ -1,8 +1,7 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { Grid, Button, Image, Header, Segment } from "semantic-ui-react";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { Button, Grid, Header, Image, Segment } from "semantic-ui-react";
 import { getRecipe } from "../services/api";
-import { Link } from "react-router-dom";
 
 const RecipeDetails = () => {
   const [recipe, setRecipe] = useState({});
@@ -12,7 +11,7 @@ const RecipeDetails = () => {
   useEffect(() => {
     const getData = async () => {
       let result = await getRecipe(recipeId);
-      if (result && result.recipe) {
+      if (result?.recipe) {
         setRecipe(result.recipe);
       }
     };
@@ -24,7 +23,7 @@ const RecipeDetails = () => {
       <Grid.Column>
         <Button
           as={Link}
-          to={"/recipes"}
+          to="/recipes"
           content="Back to recipe List"
           color="yellow"
           style={{ marginBottom: 40 }}
@@ -35,14 +34,14 @@ const RecipeDetails = () => {
         <Header size="medium">{recipe.title}</Header>
         <p>Provided By: {recipe.publisher}</p>
         <Button
-          as={"a"}
+          as="a"
           href={recipe.publisher_url}
           target="_blank"
           content="Publisher Webpage"
           color="blue"
         />
         <Button
-          as={"a"}
+          as="a"
           href={recipe.source_url}
           target="_blank"
           content="Recipe URL"
@@ -50,12 +49,11 @@ const RecipeDetails = () => {
         />
         <Header size="large" content="Ingredients" />
         <Segment.Group>
-          {recipe &&
-            recipe.ingredients.map((data) => (
-              <Segment>
-                <h5>{data}</h5>
-              </Segment>
-            ))}
+          {recipe?.ingredients.map((data) => (
+            <Segment key={data}>
+              <h5>{data}</h5>
+            </Segment>
+          ))}
         </Segment.Group>
       </Grid.Column>
     </Grid>

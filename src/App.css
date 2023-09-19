@@ -1,7 +1,6 @@
 .bg-image {
   position: relative;
-  background: linear-gradient(rgba(8, 8, 8, 0.3), rgba(8, 8, 8, 0.3)),
-    url("./assets/letsCook-background.jpg");
+  background: linear-gradient(rgba(8, 8, 8, 0.3), rgba(8, 8, 8, 0.3)), url("./assets/background.jpg");
   min-height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -58,4 +57,27 @@
   color: #333; /* Text color of the tooltip */
   z-index: 1; /* Ensure the tooltip appears above other content */
   white-space: normal; /* Allow the tooltip to wrap if necessary */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.container .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 4rem;
+  justify-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container .grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Search from "../components/Search";
 import RecipeList from "../components/RecipeList";
+import Search from "../components/Search";
 import { getRecipes } from "../services/api";
 
 const Recipes = () => {
@@ -10,7 +10,7 @@ const Recipes = () => {
   useEffect(() => {
     const getSearchedResult = async () => {
       let result = await getRecipes(searchedQuery);
-      if (result && result.recipes) {
+      if (result?.recipes) {
         setRecipes(result.recipes);
       }
     };

@@ -1,5 +1,6 @@
 import axios from "axios";
-import { API_URL } from "../constants/constant";
+
+const API_URL = "https://forkify-api.herokuapp.com/api";
 
 export const getRecipes = async (searchedQuery) => {
   try {

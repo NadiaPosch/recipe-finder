@@ -1,4 +1,4 @@
-const Header = (props) => {
+export const Header = (props) => {
   return (
     <div className={props.bgClass}>
       <div className="text-content">
@@ -9,4 +9,3 @@ const Header = (props) => {
   );
 };
 
-export default Header;

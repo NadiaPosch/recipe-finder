@@ -1,10 +1,10 @@
-import { Button, Card, Popup } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+import { Button, Card, Popup } from "semantic-ui-react";
 
 const RecipeListItem = ({ recipe }) => {
   return (
     <Card>
-      <img src={recipe.image_url} alt="thumbnail" style={{ height: 200 }} />
+      <img src={recipe.image_url} alt="thumbnail" style={{ height: 180 }} />
       <Card.Content>
         <Popup
           trigger={
